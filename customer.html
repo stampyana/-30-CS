@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Thai:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <main class="container">
+    <h1>สั่งซื้อของที่ระลึก 30 ปี วิทยาการคอมพิวเตอร์</h1>
+    <form>
+      <fieldset>
+        <legend>ข้อมูลลูกค้า</legend>
+
+        <div class="form-row">
+          <div class="form-group">
+            
+            <input type="text" id="first-name" name="firstname" placeholder=" " class="form-input" required>
+            <label for="first-name" class="form-label">ชื่อ</label>
+          </div>
+
+          <div class="form-group">
+            <input type="text" id="last-name" name="lastname" placeholder=" " class="form-input" required>
+            <label for="last-name" class="form-label" >นามสกุล</label>
+            
+          </div>
+        </div>
+
+    <div class="form-row">
+        <div class="form-group">
+          <input type="text" id="province" name="province" class="form-input" placeholder=" " required />
+          <label for="province" class="form-label">จังหวัด</label>
+        </div>
+
+        <div class="form-group">
+          <input type="text" id="district" name="district" class="form-input" placeholder=" " required />
+          <label for="district" class="form-label">อำเภอ</label>
+        </div>
+
+        <div class="form-group">
+          <input type="text" id="postal-code" name="postalcode" class="form-input" placeholder=" " pattern="[0-9]{5}" maxlength="5" required />
+          <label for="postal-code" class="form-label">รหัสไปรษณีย์</label>
+        </div>
+    </div>
+
+
+      <div class="form-row">
+        <div class="form-group">
+          <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" maxlength="10" placeholder=" " class="form-input" required>
+          <label for="phone" class="form-label">เบอร์โทรศัพท์</label>
+        </div>
+
+        <div class="form-group">
+          <input type="email" id="email" name="email" placeholder=" " class="form-input" required>
+          <label for="email" class="form-label">อีเมล</label>
+        </div>
+      </div>
+
+      </fieldset>
+
+    <fieldset>
+    <legend>รายละเอียดสินค้า</legend>
+    <div class="form-group">
+        <label for="product">เลือกรายการสินค้า</label>
+        <select name="product" id="product" class="form-input">
+            <option value="" selected disabled>เลือกสินค้า</option>
+            <option value="shirt">เสื้อครบรอบ 30 ปี สาขาวิทยาการคอมพิวเตอร์</option>
+            <option value="hats">หมวก</option>
+            <option value="bags">กระเป๋า</option>
+            <option value="pins">เข็มกลัด</option>
+            <option value="glass">แก้ว</option>
+            <option value="umbrellas">ร่ม</option>
+        </select>
+
+        <div id="product-images">
+            <img src="img/unnamed.png" id="img-shirt" class="product-image hidden" alt="รูปเสื้อ">
+            <img src="img/หมวก.jpg" id="img-hats" class="product-image hidden" alt="รูปหมวก">
+            <img src="img/กระเป๋า.jpg" id="img-bags" class="product-image hidden" alt="รูปกระเป๋า">
+            <img src="img/เข็มกรัด.jpg" id="img-pins" class="product-image hidden" alt="รูปเข็มกลัด">
+            <img src="img/แก้ว.jpg" id="img-glass" class="product-image hidden" alt="รูปแก้ว">
+            <img src="img/ร่ม.jpg" id="img-umbrellas" class="product-image hidden" alt="รูปร่ม">
+        </div>
+
+        <div id="shirt-option" class="hidden">
+            <label for="shirt-color">เลือกสีเสื้อ</label>
+            <select id="shirt-color" name="shirt-color" class="form-input" required >
+                <option value="" selected disabled>เลือกสี</option>
+                <option value="white">ขาว</option>
+                <option value="dark-blue">น้ำเงินเข้ม</option>
+            </select>
+
+            <label for="shirt-size">เลือกไซส์</label>
+            <select id="shirt-size" class="form-input" name="shirt-size" required>
+                <option value="" selected disabled>เลือกไซส์</option>
+                <option value="ss">SS</option>
+                <option value="s">S</option>
+                <option value="m">M</option>
+                <option value="l">L</option>
+                <option value="xl">XL</option>
+                <option value="xxl">2XL</option>
+                <option value="xxxl">3XL</option>
+                <option value="4xl">4XL</option>
+            </select>
+        </div>
+
+        <div id="hats-option" class="hidden">
+            <label for="hats-color">เลือกสีหมวก</label>
+            <select id="hats-color" name="hats-color" class="form-input" required>
+                <option value="" selected disabled>เลือกสี</option>
+                <option value="">น้ำเงินเข้ม</option>
+                <option value="">สีเขียว</option>
+                <option value="">สีเทา</option>
+            </select>
+
+        </div>
+    </div>
+
+    </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>การจัดส่งสินค้า</legend>
+        <div class="form-group">
+          <label for="delivery-method">เลือกรูปแบบการรับสินค้า</label>
+          <select id="delivery-method" name="delivery-method" class="form-input" required>
+            <option value="" selected disabled>เลือกวิธีรับสินค้า</option>
+            <option value="pickup">รับด้วยตนเอง</option>
+            <option value="delivery">จัดส่ง</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <fieldset id="payment-section" class="hidden">
+        <legend>การชำระเงิน</legend>
+        <div class="form-group">
+          <label for="payment-method">คุณสะดวกชำระเงินรูปแบบใด</label>
+          <select id="payment-method" name="payment-method" class="form-input" required>
+            <option value="" selected disabled>เลือกช่องทางการชำระเงิน</option>
+            <option value="promptpay">QR พร้อมเพย์</option>
+            <option value="cash">เก็บเงินปลายทาง</option>
+          </select>
+        </div>
+
+        <div id="qr-section" class="hidden">
+          <p>กรุณาสแกน QR ด้านล่างเพื่อชำระเงิน</p>
+          <img src="img/qr.png" width="200" alt="QR พร้อมเพย์" />
+          <label for="slip-upload">แนบรูปสลิป</label>
+          <input type="file" id="slip-upload" name="slip-upload" accept="image/*" required />
+           <img id="preview" src="" alt="Preview รูปสลิป" />
+        </div>
+      </fieldset>
+
+
+      <button type="submit" ><span>ส่งคำสั่งซื้อ</span></button>
+    </form>
+
+    </main>
+    <script src="script.js"></script>
+
+</body>
+</html>

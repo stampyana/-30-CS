@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin จัดการ Stock สินค้า</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Thai:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin-style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Stock สินค้า</h1>
+
+    <div class="controls">
+      <input type="text" id="search-input" placeholder=" ค้นหาสินค้า..." oninput="render()">
+      <div class="btn-group">
+        <button onclick="toggleAllDetails(true)">แสดงทั้งหมด</button>
+        <button onclick="toggleAllDetails(false)">ซ่อนทั้งหมด</button>
+      </div>
+    </div>
+
+    <div class="summary" id="summary">รวมทั้งหมด: 0 ชิ้น</div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>รูปภาพ</th>
+          <th>ชื่อสินค้า</th>
+          <th>ราคา (฿)</th>
+          <th>คงเหลือรวม</th>
+          <th>จัดการสต็อก</th>
+        </tr>
+      </thead>
+      <tbody id="product-table">
+      </tbody>
+    </table>
+  </main>
+
+  <script src="admin-script.js"></script>
+</body>
+</html>
